@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Toggle from './ToggleRenderProps'
+import Toggle from './ToggleRPC'
 
 import logo from './logo.svg';
 import './App.css';
@@ -13,12 +13,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Toggle render={({ on, toggle }) => (
-          <div>
-            {on && <h1>Show me</h1>}
-            <button onClick={toggle}>Show / hide</button>
-          </div>
-        )} />
+        <Toggle>
+          {({ on, toggle }) => (
+            <div>
+              {on && <h1>Show me</h1>}
+              <button onClick={toggle}>Show / hide</button>
+            </div>
+          )}
+        </Toggle>
       </header>
     </div>
   );
