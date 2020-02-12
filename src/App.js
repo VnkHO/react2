@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-import Toggle from './ToggleRPC'
+import Toggle from './ToggleRPC';
+import Portal from './Portal';
 
 import logo from './logo.svg';
 import './App.css';
@@ -15,12 +16,18 @@ function App() {
         </p>
         <Toggle>
           {({ on, toggle }) => (
-            <div>
+            <Fragment>
               {on && <h1>Show me</h1>}
               <button onClick={toggle}>Show / hide</button>
-            </div>
+              <Portal>
+                {on && <h1>Hi, this is a portal inside Toggle</h1>}
+              </Portal>
+            </Fragment>
           )}
         </Toggle>
+        <Portal>
+          <h1>Hi, this is a portal</h1>
+        </Portal>
       </header>
     </div>
   );
