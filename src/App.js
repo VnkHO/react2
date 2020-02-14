@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 
-import { Toggle, Portal, Modal } from './Utilities';
+import { Toggle, Portal } from 'Utilities';
+import { Modal } from 'Elements';
 
 import logo from './logo.svg';
 import './App.css';
