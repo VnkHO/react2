@@ -71,11 +71,9 @@ const CloseButton = styled.button`
 `;
 
 const Background = styled.div`
-    position: absolute;
+    ${absolute({})};
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     background: black;
     opacity: 0.5;
 `;
